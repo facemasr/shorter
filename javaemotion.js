@@ -1,6 +1,3 @@
-
-
-
 function containsAny(str, substrings) {
     for (var i = 0; i != substrings.length; i++) {
        var substring = substrings[i];
@@ -10,6 +7,7 @@ function containsAny(str, substrings) {
     }
     return null; 
 }
+
 	$("#sServer button").click(function(){
 		var embed = $(this).attr("data-embed");
 		console.log(embed);
@@ -21,11 +19,16 @@ function containsAny(str, substrings) {
 		}
 		$(".active").attr("class","");
 		$(this).attr("class","active");
+		
+		
 var iframe = document.getElementsByTagName("iframe")[0];
+
 var qfrm = containsAny(testv, ["ok90", "vidhdr"]);
 if(qfrm){
 iframe.sandbox = '';
 }else{
 iframe.sandbox = 'allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation';
-}	
+}
+		
 	});
+	
